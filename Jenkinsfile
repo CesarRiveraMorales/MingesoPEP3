@@ -11,6 +11,7 @@ pipeline {
             steps {
                 sh 'cd ./frontend/;npm -g install'
                 sh 'cd ./frontend/;npm install http-server -g'
+                sh 'cd ./frontend/;npm install -g @vue/cli'
             }
         }
         stage('Analisis de codigo estatico'){
