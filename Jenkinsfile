@@ -2,8 +2,8 @@ pipeline {
 
     agent{
         docker {
-            image 'node'
-            args '-p 8080:8080'
+            image 'node' 
+            args '-p 8081:8081 --network jenkins-blue-ocean-'
         }
     }
     stages {
