@@ -213,6 +213,7 @@ export default {
         /*Crear nueva tarea*/
         mensaje: '',
         creado: 'no',
+        count: 0,
         nuevaTarea: {
           nombre: '',
           descrip: '',

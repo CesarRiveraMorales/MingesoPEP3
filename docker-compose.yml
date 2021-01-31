@@ -1,0 +1,14 @@
+version: "3"
+ 
+services:
+  jenkins:
+    user: root
+    image: "jenkinsci/blueocean"
+    ports:
+      - "8080:8080"
+    networks:
+      - mynet
+    
+networks:
+  mynet:
+    driver: bridge
