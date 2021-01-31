@@ -7,11 +7,6 @@ pipeline {
         }
     }
     stages {
-        stage('Clonar repositorio') {
-            steps {
-                git 'https://github.com/CesarRiveraMorales/MingesoPEP3.git'
-            }
-        }
         stage('Instalar recursos') {
             steps {
                 sh 'npm -g install'
