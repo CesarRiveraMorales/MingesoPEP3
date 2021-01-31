@@ -1,6 +1,14 @@
 pipeline {
 
-    agent any
+    agent{
+        docker {
+            image 'node'
+            args '-p 8081:8081'
+        }
+    }
+    environment {
+        CI = true
+    }
     stages {
         stage('Clonar repositorio') {
             steps {
