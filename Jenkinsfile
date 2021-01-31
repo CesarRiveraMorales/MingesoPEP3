@@ -9,18 +9,18 @@ pipeline {
     stages {
         stage('Instalar recursos') {
             steps {
-                sh 'npm -g install'
-                sh 'npm install http-server -g'
+                sh 'cd ./frontend/;npm -g install'
+                sh 'cd ./frontend/;npm install http-server -g'
             }
         }
         stage('Analisis de codigo estatico'){
             steps {
-                sh 'npm run lint'
+                sh 'cd ./frontend/;npm run lint'
             }
         }
         stage('Build') {
             steps {
-                sh 'npm run serve'
+                sh 'cd ./frontend/;npm run serve'
             }
         }
     }
